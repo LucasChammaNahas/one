@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 export default function useGlobalStates() {
-  const [globalStates, setGlobalStates] = useState({
+  return useState({
     isLoggedIn: false,
     user: undefined,
     isLoading: true,
   });
 
-  return [globalStates, setGlobalStates];
+  // return [globalStates, setGlobalStates];
 }
