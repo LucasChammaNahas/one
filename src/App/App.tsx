@@ -3,13 +3,13 @@ import { createContext } from 'react';
 // import LoginPage from 'App/Login/LoginPage';
 
 import useApi from './Api/useApi';
-import useAppState, { initialAppState } from './States/useAppState';
+import useAppReducer, { initialAppState } from './Reducer/useAppReducer';
 
 
 const GlobalContext = createContext(initialAppState);
 
 export default function App() {
-  const [appState, dispatch] = useAppState();
+  const [appState, dispatch] = useAppReducer();
   useApi(appState, dispatch);
 
   if (appState.isLoading === true) return <h1 className="p-24">loading...</h1>

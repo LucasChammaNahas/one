@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { IAppState, IAction } from '../Model/AppState.model';
+import { IAppState, IAction } from '../Model/AppReducer.model';
 
 
 function reducer(state: IAppState, action: IAction) {
@@ -17,7 +17,7 @@ export const initialAppState: IAppState = {
   isLoading: true,
 };
 
-export default function useAppState() {
+export default function useAppReducer() {
   return useReducer(reducer, initialAppState);
 }
 
