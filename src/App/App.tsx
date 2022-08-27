@@ -3,22 +3,21 @@ import { createContext } from 'react';
 // import LoginPage from 'App/Login/LoginPage';
 
 import useApi from './Api/useApi';
-import useGlobalStates from './States/useGlobalStates';
+import useAppState, { initialAppState } from './States/useAppState';
 
-// const GlobalContext = createContext(null);
+
+const GlobalContext = createContext(initialAppState);
 
 export default function App() {
-  const [globalStates, setGlobalStates] = useGlobalStates();
-  useApi(globalStates, setGlobalStates);
-  
-  // if (globalStates.isLoading === true) return <h1 className="p-24">loading...</h1>
-  // if (globalStates.isLoggedIn === false) return <LoginPage />;
+  const [appState, dispatch] = useAppState();
+  useApi(appState, dispatch);
 
-  // return (
-  //   <GlobalContext.Provider value={globalStates}>
-  //     <div>{globalStates.imgUrl}</div>
-  //   </GlobalContext.Provider>
-  // );
+  if (appState.isLoading === true) return <h1 className="p-24">loading...</h1>
+  // if (appState.isLoggedIn === false) return <LoginPage />;
 
-  return <h1>olar</h1>
+  return (
+    <GlobalContext.Provider value={appState}>
+      <div>oi</div>
+    </GlobalContext.Provider>
+  );
 }
