@@ -10,12 +10,14 @@ export const LoginContext = createContext(null);
 export default function LoginPage() {
   const [loginState, setLoginState,] = useState({ email: '', pwd: '' })
 
+  function handleFormSubmit(e) { submitLogin(e, loginState) }
+
   return (
     <LoginContext.Provider value={{ loginState, setLoginState }}>
       <div className="h-screen flex justify-center items-center">
         <div className="card w-96 bg-base-300 shadow-xl p-16">
           <h2 className="text-secondary text-4xl">Login</h2>
-          <form onSubmit={(e) => submitLogin(e, loginState)}>
+          <form onSubmit={handleFormSubmit}>
             <p>Please, log in to continue</p>
             <LoginEmailInput />
             <LoginPasswordInput />
