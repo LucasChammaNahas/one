@@ -11,7 +11,9 @@ export const LoginContext = createContext(null);
 export default function LoginPage() {
   const [loginState, setLoginState,] = useState({ email: '', pwd: '' })
 
-  function handleFormSubmit(e) { submitLogin(e, loginState) }
+  function handleFormSubmit(e) {
+    submitLogin(e, loginState)
+  }
 
   return (
     <LoginContext.Provider value={{ loginState, setLoginState }}>
