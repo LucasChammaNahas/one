@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 import useApi from './Api/useApi';
 import LoginPage from './Pages/Login/LoginPage';
-import IngredientsPage from './Pages/IngredientsPage/IngredientsPage';
 import useAppReducer, { initialAppState } from './Reducer/useAppReducer';
+import PagesContainerWithNavigation from './Components/PagesContainerWithNavigation/PagesContainerWithNavigation';
 
 
 const GlobalContext = createContext(initialAppState);
@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <GlobalContext.Provider value={appState}>
-      <IngredientsPage />
+      <PagesContainerWithNavigation />
     </GlobalContext.Provider>
   );
 }

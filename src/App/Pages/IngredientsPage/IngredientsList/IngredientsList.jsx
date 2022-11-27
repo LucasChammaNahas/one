@@ -5,10 +5,10 @@ import { ingredients } from './ingredientsMock';
 
 export default function IngredientsList() {
 
-  return (
-    <div>
-      {ingredients.map((ingredient) => <IngredientCard {...ingredient} />)}
-    </div>
-  );
+   return (
+      <div>
+         {ingredients.map((ingredient) => <IngredientCard {...ingredient} />)}
+      </div>
+   );
 }
 

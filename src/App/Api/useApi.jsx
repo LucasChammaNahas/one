@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { IAppState } from '../Model/AppReducer.model';
 
-export default function useApi(appState: IAppState, dispatch: Function) {
+export default function useApi(appState, dispatch) {
 
   // Login
   useEffect(() => {

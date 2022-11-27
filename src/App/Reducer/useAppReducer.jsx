@@ -1,8 +1,7 @@
 import { useReducer } from "react";
-import { IAppState, IAction } from '../Model/AppReducer.model';
 
 
-function reducer(state: IAppState, action: IAction) {
+function reducer(state, action) {
   switch (action.type) {
     case 'login':
       return { ...state, isLoggedIn: true, user: action.payload }
@@ -13,7 +12,7 @@ function reducer(state: IAppState, action: IAction) {
   }
 }
 
-export const initialAppState: IAppState = {
+export const initialAppState = {
   isLoggedIn: false,
   user: undefined,
   isLoading: true,
