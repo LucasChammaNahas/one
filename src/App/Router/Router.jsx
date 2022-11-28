@@ -1,12 +1,16 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import DishesPage from 'App/Pages/DishesPage/DishesPage';
+import IngredientsPage from 'App/Pages/IngredientsPage/IngredientsPage';
+import MealsPage from 'App/Pages/MealsPage/MealsPage';
+import MenusPage from 'App/Pages/MenusPage/MenusPage';
 
 export default function Router() {
    return (
-      <BrowserRouter>
-         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="users/*" element={<Users />} />
-         </Routes>
-      </BrowserRouter>
+      <Routes>
+         <Route path="menus" element={<MenusPage />} />
+         <Route path="meals/*" element={<MealsPage />} />
+         <Route path="dishes/*" element={<DishesPage />} />
+         <Route path="ingredients/*" element={<IngredientsPage />} />
+      </Routes>
    );
 }
