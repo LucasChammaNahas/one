@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react';
 import { AppContext } from 'App/StateManagement/useContexts';
 
-export default function useSetCurrentPage(page) {
+export default function useSetPageAsCurrent(page) {
    const { appDispatch } = useContext(AppContext);
 
    useEffect(() => {

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import useSetCurrentPage from 'App/Hooks/useSetCurrentPage';
+import useSetPageAsCurrent from 'App/Hooks/useSetPageAsCurrent';
 
 
 export default function MealsPage() {  
-  useSetCurrentPage('meals');
-  
+  useSetPageAsCurrent('meals');
+
   return (
     <div>
       Meals

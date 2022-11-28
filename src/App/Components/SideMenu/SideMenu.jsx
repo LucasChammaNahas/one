@@ -12,13 +12,13 @@ export default function SideMenu() {
             <p className={`${currentPage === 'menus' ? 'text-green-300' : ''}`}>Menus</p>
          </Link>
          <Link to="meals">
-            <p>Meals</p>
+            <p className={`${currentPage === 'meals' ? 'text-green-300' : ''}`}>Meals</p>
          </Link>
          <Link to="dishes">
-            <p>Dishes</p>
+            <p className={`${currentPage === 'dishes' ? 'text-green-300' : ''}`}>Dishes</p>
          </Link>
          <Link to="ingredients">
-            <p>Ingredients</p>
+            <p className={`${currentPage === 'ingredients' ? 'text-green-300' : ''}`}>Ingredients</p>
          </Link>
       </div>
    );
