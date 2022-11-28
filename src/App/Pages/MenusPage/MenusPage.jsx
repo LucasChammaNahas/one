@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useSetPageAsCurrent from 'App/Hooks/useSetPageAsCurrent';
+import useSetPageAsCurrent from 'App/Router/useSetPageAsCurrent';
 
 export default function MenusPage() {
   useSetPageAsCurrent('menus');

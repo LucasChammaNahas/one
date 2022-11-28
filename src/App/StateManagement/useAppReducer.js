@@ -4,7 +4,6 @@ import { CURRENT_PAGE } from './reducerConstants';
 function reducer(state, action) {
    switch (action.type) {
       case CURRENT_PAGE:
-         console.log('--> reducer', action)
          return { ...state, currentPage: action.payload };
       case 'login':
          return { ...state, isLoggedIn: true, user: action.payload };
