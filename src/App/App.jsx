@@ -1,13 +1,14 @@
-import { createContext } from 'react';
 import useApi from './Api/useApi';
-import LoginPage from './Pages/Login/LoginPage';
-import useAppReducer, { initialAppState } from './StateManagement/useAppReducer';
-import PagesContainerWithNavigation from './Components/PagesContainerWithNavigation/PagesContainerWithNavigation';
+import useAppReducer from './StateManagement/useAppReducer';
+import { AppContext } from './StateManagement/contextsManager';
 import { BrowserRouter } from 'react-router-dom'
-import { AppContext } from './StateManagement/useContexts';
+
+import { AppProvider } from './StateManagement/contextsManager';
+
+import LoginPage from './Pages/Login/LoginPage';
+import PagesContainerWithNavigation from './Components/PagesContainerWithNavigation/PagesContainerWithNavigation';
 
 
-const GlobalContext = createContext(initialAppState);
 
 export default function App() {
   const [appState, appDispatch] = useAppReducer();
@@ -18,9 +19,12 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <AppContext.Provider value={{appState, appDispatch}}>
+      {/* <AppContext.Provider value={{appState, appDispatch}}> */}
+      <AppProvider>
+
         <PagesContainerWithNavigation />
-      </AppContext.Provider>
+      </AppProvider>
+      {/* </AppContext.Provider> */}
     </BrowserRouter>
   );
 }
