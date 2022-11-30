@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
-export default function SideMenu() {
+export default function NavigationMenu() {
    const currentPage = useLocation()?.state?.currentPage;
-   console.log('--> ', useLocation())
 
    return (
       <div className="border-4 border-indigo-500">
@@ -18,6 +17,9 @@ export default function SideMenu() {
          </Link>
          <Link to="ingredients">
             <p className={`${currentPage === 'ingredients' ? 'text-green-300' : ''}`}>Ingredients</p>
+         </Link>
+         <Link to="add-menu">
+            <p className={`${currentPage === 'addMenu' ? 'text-green-300' : ''}`}>Add Menu</p>
          </Link>
       </div>
    );
