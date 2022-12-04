@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react';
-import useAppReducer from './useAppReducer';
+import useAppReducer from '../Reducers/useAppReducer';
 
 //App
-export const AppContext = createContext();
+const AppContext = createContext();
 export const useAppContext = () => useContext(AppContext);
 export function AppProvider({ children }) {
    const [appState, appDispatch] = useAppReducer();
