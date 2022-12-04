@@ -9,8 +9,7 @@ function reducer(state, action) {
    }
 }
 
-export const initialState = {
-};
+export const initialState = {};
 
 export default function useAddMenuReducer() {
    return useReducer(reducer, initialState);

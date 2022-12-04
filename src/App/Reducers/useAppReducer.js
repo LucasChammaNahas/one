@@ -14,7 +14,7 @@ function reducer(state, action) {
    }
 }
 
-export const initialAppState = {
+const initialState = {
    currentPage: undefined,
    isLoggedIn: false,
    user: undefined,
@@ -22,5 +22,5 @@ export const initialAppState = {
 };
 
 export default function useAppReducer() {
-   return useReducer(reducer, initialAppState);
+   return useReducer(reducer, initialState);
 }

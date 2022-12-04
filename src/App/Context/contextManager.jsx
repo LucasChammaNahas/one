@@ -10,5 +10,9 @@ export function AppProvider({ children }) {
 }
 
 //Add Menu
-export const AddMenuContext = createContext();
+const AddMenuContext = createContext();
 export const useAddMenuContext = () => useContext(AddMenuContext);
+export function AddMenuProvider({ children }) {
+   const [addMenuState, addMenuDispatch] = useAppReducer();
+   return <AppContext.Provider value={{ addMenuState, addMenuDispatch }}>{children}</AppContext.Provider>;
+}
