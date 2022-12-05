@@ -1,5 +1,5 @@
 
-export default function AddMenuWeeksList(props) {
+export default function AddMenuDaysList(props) {
    return (
       <div> 
          <p>List</p>

@@ -1,15 +1,21 @@
 import { useReducer } from 'react';
 
+const ACTIONS = {
+   menuName: 'menuName',
+};
+
 function reducer(state, action) {
    switch (action.type) {
-      case 'duck':
-         return { ...state, currentPage: action.payload };
+      case ACTIONS.menuName:
+         return { ...state, menuName: action.payload };
       default:
          throw new Error(`Action type "${action.type}" does not exist in 'Add Menu' reducer`);
    }
 }
 
-export const initialState = {};
+const initialState = {
+   menuName: '',
+};
 
 export default function useAddMenuReducer() {
    return useReducer(reducer, initialState);
