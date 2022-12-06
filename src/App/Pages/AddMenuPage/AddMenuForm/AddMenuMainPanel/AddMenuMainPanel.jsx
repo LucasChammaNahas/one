@@ -3,6 +3,7 @@ import AddMenuTabs from './AddMenuTabs/AddMenuTabs'
 import AddMenuDayIndicator from './AddMenuDayIndicator'
 import AddMenuSearchWithDropdown from './AddMenuSearchWithDropdown'
 import AddMenuDishesCard from './AddMenuDishesCard'
+import AddMenuNextTabButton from './AddMenuNextTabButton'
 
 export default function AddMenuMainPanel(props) {
    return (
@@ -12,6 +13,7 @@ export default function AddMenuMainPanel(props) {
          <AddMenuDayIndicator />
          <AddMenuSearchWithDropdown />
          <AddMenuDishesCard />
+         <AddMenuNextTabButton />
       </div>
    )
 }

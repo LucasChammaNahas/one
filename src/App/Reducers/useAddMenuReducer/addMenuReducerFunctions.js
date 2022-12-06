@@ -1,13 +1,15 @@
-export function getNextTab({ tabs, currentTab }) {
-   if (!Array.isArray(tabs) || typeof currentTab !== 'string') {
-      throw new Error('getNextTab says: invalid arguments');
+import { tabs } from 'App/Pages/AddMenuPage/AddMenuForm/AddMenuMainPanel/AddMenuTabs/addMenuTabsConstants';
+
+export function getNextTab({ activeTab }) {
+   if (typeof activeTab !== 'string') {
+      throw new Error('getNextTab says: invalid argument');
    }
-   const currentTabIndex = tabs.indexOf(currentTab);
-   if (currentTabIndex === -1) {
+   const activeTabIndex = tabs.indexOf(activeTab);
+   if (activeTabIndex === -1) {
       throw new Error('getNextTab says: tab does not exist in tabs array');
    }
-   if (currentTabIndex >= tabs.length - 1) {
+   if (activeTabIndex >= tabs.length - 1) {
       return undefined;
    }
-   return tabs[currentTabIndex + 1];
+   return tabs[activeTabIndex + 1];
 }
