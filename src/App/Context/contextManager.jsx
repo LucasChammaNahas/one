@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react';
 import useAppReducer from '../Reducers/useAppReducer';
+import useAddMenuReducer from 'App/Reducers/useAddMenuReducer';
 
 //App
 const AppContext = createContext();
@@ -13,6 +14,6 @@ export function AppProvider({ children }) {
 const AddMenuContext = createContext();
 export const useAddMenuContext = () => useContext(AddMenuContext);
 export function AddMenuProvider({ children }) {
-   const [addMenuState, addMenuDispatch] = useAppReducer();
-   return <AppContext.Provider value={{ addMenuState, addMenuDispatch }}>{children}</AppContext.Provider>;
+   const [addMenuState, addMenuDispatch] = useAddMenuReducer();
+   return <AddMenuContext.Provider value={{ addMenuState, addMenuDispatch }}>{children}</AddMenuContext.Provider>;
 }
