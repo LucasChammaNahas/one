@@ -4,11 +4,11 @@ import AddMenuMainPanel from './AddMenuMainPanel/AddMenuMainPanel';
 
 export default function AddMenuForm() {
    return (
-      <AddMenuProvider>
+      // <AddMenuProvider>
          <div className="flex">
             <AddMenuMainPanel />
             <AddMenuDaysList />
          </div>
-      </AddMenuProvider>
+      // </AddMenuProvider>
    );
 }

@@ -1,8 +1,11 @@
 import { useReducer } from 'react';
+import { tabs } from 'App/Pages/AddMenuPage/AddMenuForm/AddMenuMainPanel/AddMenuTabs/addMenuTabsConstants';
+import { getNextTab } from './addMenuReducerFunctions';
 
 export const ACTIONS = {
    menuName: 'menuName',
    activeTab: 'activeTab',
+   nextTab: 'nextTab'
 };
 
 function reducer(state, action) {
