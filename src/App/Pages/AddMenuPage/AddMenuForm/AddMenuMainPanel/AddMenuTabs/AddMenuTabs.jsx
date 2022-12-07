@@ -12,7 +12,6 @@ export default function AddMenuTabs() {
    }, []); //eslint-disable-line
 
 
-   console.log('--> ', activeTab)
 
    function setTab(payload) {
       addMenuDispatch({ type: ACTIONS.activeTab, payload });

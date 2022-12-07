@@ -8,5 +8,4 @@ export function submitLogin(e: { preventDefault: () => void; }, loginObj: { emai
       "submitLogin function says: parameter must be an object with email and pwd as strings"
     );
   }
-  console.log('submitLogin:', loginObj)
 }
