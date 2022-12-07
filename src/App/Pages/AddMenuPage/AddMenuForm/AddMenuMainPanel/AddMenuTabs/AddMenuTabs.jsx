@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
-import { useAddMenuContext } from 'App/Context/contextManager';
 import { ACTIONS } from 'App/Reducers/useAddMenuReducer/useAddMenuReducer';
 import { tabs } from './addMenuTabsConstants';
+import allContexts  from 'App/Context/contextManager';
+const {useAddMenuContext} = allContexts;
 
 export default function AddMenuTabs() {
-   const { addMenuState, addMenuDispatch } = useAddMenuContext();
+   const [ addMenuState, addMenuDispatch ] = useAddMenuContext();
    const { activeTab } = addMenuState;
+   // const  activeTab = 'Breakfast'
 
    useEffect(() => {
       if (activeTab === undefined) setTab(tabs[0])

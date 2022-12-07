@@ -1,15 +1,17 @@
 import useApi from './Api/useApi';
 import LoginPage from './Pages/Login/LoginPage';
 import PagesContainerWithNavigation from './Components/PagesContainerWithNavigation/PagesContainerWithNavigation';
-import { useAppContext } from './Context/contextManager';
-import { AppProvider } from './Context/contextManager';
+import allContexts  from 'App/Context/contextManager';
+const {useAppContext, withAppProvider} = allContexts;
+// import { withAppProvider } from './Context/contextManager';
 
 
 
 function App() {
-  // const x = useAppContext();
+  const x = useAppContext();
+  console.log('--> app 1', x)
   // useApi();
-console.log('--> app 1', )
+
   // if (appState.isLoading === true) return <h1 className="p-24">loading...</h1>
   // if (appState.isLoggedIn === false) return <LoginPage />;
 
@@ -18,25 +20,9 @@ console.log('--> app 1', )
   );
 }
 
-function AppWithContext() {
-  return (
-    <AppProvider>
-      <App />
-    </AppProvider>
-  );
-}
 
-function withContext(Component) {
-  return function () {
-    return (
-      <AppProvider>
-        <Component />
-      </AppProvider>
-    );
-  }
-}
 
-// export default withContext(App);
-export default AppWithContext;
+export default withAppProvider(App);
+// export default App;
 
 

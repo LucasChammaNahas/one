@@ -1,7 +1,8 @@
 import NavigationMenu from '../NavigationMenu/NavigationMenu';
 import NavBar from '../NavBar/NavBar';
 import Router from 'App/Router/Router';
-import { AddMenuProvider } from 'App/Context/contextManager';
+
+// import { AddMenuProvider } from 'App/Context/contextManager';
 
 export default function PagesContainerWithNavigation() {
 
@@ -10,9 +11,9 @@ export default function PagesContainerWithNavigation() {
          <NavBar />
          <div className="flex">
             <NavigationMenu />
-            <AddMenuProvider>
+            {/* <AddMenuProvider> */}
                <Router />
-            </AddMenuProvider>
+            {/* </AddMenuProvider> */}
          </div>
       </div>
    );
