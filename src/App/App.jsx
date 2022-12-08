@@ -1,8 +1,8 @@
 import useApi from './Api/useApi';
 import LoginPage from './Pages/Login/LoginPage';
 import PagesContainerWithNavigation from './Components/PagesContainerWithNavigation/PagesContainerWithNavigation';
-import allContexts  from 'App/Context/contextManager';
-const {useAppContext, withAppProvider} = allContexts;
+import contextManager  from 'App/Context/contextManager';
+const {useAppContext, withAppProvider} = contextManager;
 // import { withAppProvider } from './Context/contextManager';
 
 

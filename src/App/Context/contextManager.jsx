@@ -23,7 +23,7 @@ for (const [name, useStateOrReducer] of contextData) {
       </Context.Provider>
    );
 
-   contextsObj[useContextName] = useMyContext;
+   contextsObj[useContextName] = useMyContext ;
    contextsObj[withProviderName] = withProvider;
 }
 
