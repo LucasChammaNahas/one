@@ -1,4 +1,4 @@
-import { withAddMenuProvider } from './InternalAPI/internalAPI';
+import { withAddMenuProvider } from './ComponentInterface/componentInterface';
 import AddMenuDaysList from './AddMenuDaysList/AddMenuDaysList';
 import AddMenuMainPanel from './AddMenuMainPanel/AddMenuMainPanel';
 

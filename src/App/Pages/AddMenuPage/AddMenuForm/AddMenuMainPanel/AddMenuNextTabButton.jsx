@@ -1,4 +1,4 @@
-import { useAddMenuContext } from '../InternalAPI/internalAPI';
+import { useAddMenuContext } from '../ComponentInterface/componentInterface';
 import { ACTIONS } from 'App/Reducers/useAddMenuReducer/useAddMenuReducer';
 
 export default function AddMenuNextTabButton() {
