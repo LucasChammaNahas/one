@@ -4,10 +4,9 @@ import IngredientsPage from 'App/Pages/IngredientsPage/IngredientsPage';
 import MealsPage from 'App/Pages/MealsPage/MealsPage';
 import MenusPage from 'App/Pages/MenusPage/MenusPage';
 import AddMenuPage from 'App/Pages/AddMenuPage/AddMenuPage';
-import contextManager from 'App/Context/contextManager';
-const { withAddMenuProvider } = contextManager;
 
-function Router() {
+
+export default function Router() {
    return (
       <Routes>
          <Route path="menus" element={<MenusPage />} />
@@ -19,5 +18,3 @@ function Router() {
       </Routes>
    );
 }
-
-export default withAddMenuProvider(Router)

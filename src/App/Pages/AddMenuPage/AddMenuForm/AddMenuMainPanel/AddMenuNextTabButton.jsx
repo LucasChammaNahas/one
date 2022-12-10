@@ -1,6 +1,5 @@
+import { useAddMenuContext } from '../InternalAPI/internalAPI';
 import { ACTIONS } from 'App/Reducers/useAddMenuReducer/useAddMenuReducer';
-import contextManager from 'App/Context/contextManager';
-const { useAddMenuContext } = contextManager;
 
 export default function AddMenuNextTabButton() {
    const { addMenuDispatch } = useAddMenuContext();

@@ -1,14 +1,14 @@
-import { AddMenuProvider } from 'App/Context/contextManager';
+import { withAddMenuProvider } from './InternalAPI/internalAPI';
 import AddMenuDaysList from './AddMenuDaysList/AddMenuDaysList';
 import AddMenuMainPanel from './AddMenuMainPanel/AddMenuMainPanel';
 
-export default function AddMenuForm() {
+function AddMenuForm() {
    return (
-      // <AddMenuProvider>
-         <div className="flex">
-            <AddMenuMainPanel />
-            <AddMenuDaysList />
-         </div>
-      // </AddMenuProvider>
+      <div className="flex">
+         <AddMenuMainPanel />
+         <AddMenuDaysList />
+      </div>
    );
 }
+
+export default withAddMenuProvider(AddMenuForm)

@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
+import { useAddMenuContext } from '../../InternalAPI/internalAPI';
 import { ACTIONS } from 'App/Reducers/useAddMenuReducer/useAddMenuReducer';
 import { tabs } from './addMenuTabsConstants';
-import contextManager from 'App/Context/contextManager';
-const { useAddMenuContext } = contextManager;
 
 export default function AddMenuTabs() {
    const [addMenuState, addMenuDispatch] = useAddMenuContext();
