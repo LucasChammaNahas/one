@@ -1,4 +1,4 @@
-import { createContextEcosystem } from 'App/Hooks/createContextEcosystem';
+import { createContextEcosystem } from 'App/Context/createContextEcosystem';
 import useAddMenuReducer from './useAddMenuReducer/useAddMenuReducer';
 
 export const [
